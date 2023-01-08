@@ -16,7 +16,7 @@ const config = {
 // createasynthunk creates action types based on promise 3 status. then we use those status as action type in reducers
 const fetchrecipe = createAsyncThunk('searchrecipe/fetchrecipe',async (searchData) => {// takes actionname & callback
     console.log("searchData - ",searchData);
-    const response = await axios.get(`https://foodserver-tk7t.onrender.com/${searchData}`,config)
+    const response = await axios.get(`https://foodserver-tk7t.onrender.com/recipe/${searchData}`,config)
     console.log("searchresponse - ",response);
     return response
 }) 
