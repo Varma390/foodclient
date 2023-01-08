@@ -56,8 +56,8 @@ const Addrecipe = () => {
     formData.append('myImage',Image)
     formData.append('Name',state2.Name)
     formData.append('Description',state2.Description)
-    formData.append('Ingredients',state2.Ingredients)
-    formData.append('Steps',state2.Steps)
+    state2.Ingredients.forEach(e => formData.append('Ingredients',e))
+    state2.Steps.forEach(e => formData.append('Steps',e))
 
 
     for (var key of formData.entries()) {
