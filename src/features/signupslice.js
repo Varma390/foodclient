@@ -13,7 +13,7 @@ export const fetchsignup = createAsyncThunk('signup/fetchlogin',async (userdata)
     // console.log(userdata);
 // const navigate = useNavigate();
 
-    const response = await axios.post(`http://localhost:3001/signup`,userdata)
+    const response = await axios.post(`https://foodserver-tk7t.onrender.com/signup`,userdata)
     // console.log(response)
     // await axios.get(`http://localhost:3001/signup`,userdata)
     // .then(res => console.log(res))
