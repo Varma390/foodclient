@@ -10,7 +10,7 @@ const initialStatelogin = {
 // here we directly exported fetchlogin which exports all extra-reducers actions
  const fetchlogin = createAsyncThunk('login/fetchlogin',async (userdata) => {// takes actionname & callback
     console.log(userdata)
-    const response = await axios.post(`http://localhost:3001/login`,userdata)
+    const response = await axios.post(`https://foodserver-tk7t.onrender.com/login`,userdata)
     console.log("res",response);
     console.log(response.data.Token)
     if(response.status === 200){
