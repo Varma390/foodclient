@@ -16,7 +16,7 @@ const config = {
 
 const postrecipe = createAsyncThunk('addrecipe/postrecipe', async(addData) => {
     console.log("addde data - ", addData);
-    const response = await axios.post(`https://foodserver-tk7t.onrender.com/add`,addData,config)
+    const response = await axios.post(`https://foodserver-tk7t.onrender.com/recipe/add`,addData,config)
     console.log("response -" , response);
     return response
 })
